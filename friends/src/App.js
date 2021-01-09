@@ -3,6 +3,11 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { connect } from "react-redux";
 
+//
+
+import NavBar from "./components/NavBar";
+import Login from "./components/Login";
+
 function App(props) {
   console.log("Props in the App component: ", props);
   return (
@@ -23,3 +28,5 @@ function App(props) {
     </div>
   );
 }
+
+export default App;
