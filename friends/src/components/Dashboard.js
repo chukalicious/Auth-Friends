@@ -1,9 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-import Friends from "./Friends";
-import AddFriendForm from "./AddFriendForm";
-
 const Dashboard = () => {
   const history = useHistory();
   const logout = () => {
@@ -15,8 +12,7 @@ const Dashboard = () => {
       <h2>This the MyAccount/Dashboard component</h2>
       <button onClick={logout}>Logout</button>
       <br />
-      <AddFriendForm />
-      <Friends />
+      {/* <AddFriendForm /> */}
     </div>
   );
 };

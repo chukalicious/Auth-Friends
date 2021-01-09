@@ -9,6 +9,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import Home from "./components/Home";
 import AddFriendForm from "./components/AddFriendForm";
 import Dashboard from "./components/Dashboard";
+import Friends from "./components/Friends";
 import Friend from "./components/Friend";
 
 function App(props) {
@@ -16,16 +17,17 @@ function App(props) {
   return (
     <div className="App">
       <NavBar />
-      {/* The path goes with the <PrivateRoute /> , the props go in the child component */}
-      <PrivateRoute exact path="/dashboard/friends/:id">
+      {/* The path goes with the <PrivateRoute> portion, the props go in the child component */}
+      {/* <PrivateRoute exact path="/dashboard/friends/:id">
         <Friend />
-      </PrivateRoute>
-      <PrivateRoute exact path="/dashboard/add_friend">
+      </PrivateRoute> */}
+      {/* <PrivateRoute exact path="/dashboard/add_friend">
         <AddFriendForm />
-      </PrivateRoute>
-      <PrivateRoute path="/dashboard">
+      </PrivateRoute> */}
+      {/* <PrivateRoute path="/dashboard">
         <Dashboard />
-      </PrivateRoute>{" "}
+      </PrivateRoute>{" "} */}
+      {/* <Friends /> */}
       <Route path="/login" component={Login} />
       <Route exact path="/" component={Home} />
     </div>

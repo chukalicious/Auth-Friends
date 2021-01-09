@@ -23,7 +23,7 @@ const Login = () => {
       .post("/api/login", credentials)
       .then((res) => {
         console.log("success: ", res);
-        localStorage.setItem("token", JSON.stringify(res.data.payload));
+        // localStorage.setItem("token", JSON.stringify(res.data.payload));
         history.push("/dashboard");
       })
       .catch((err) => {
