@@ -3,15 +3,6 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { connect } from "react-redux";
 
-import Login from "./components/Login";
-import NavBar from "./components/NavBar";
-import PrivateRoute from "./components/PrivateRoute";
-import Home from "./components/Home";
-import AddFriendForm from "./components/AddFriendForm";
-import Dashboard from "./components/Dashboard";
-import Friends from "./components/Friends";
-import Friend from "./components/Friend";
-
 function App(props) {
   console.log("Props in the App component: ", props);
   return (
@@ -29,15 +20,6 @@ function App(props) {
       </PrivateRoute>{" "} */}
       {/* <Friends /> */}
       <Route path="/login" component={Login} />
-      <Route exact path="/" component={Home} />
     </div>
   );
 }
-
-const mapStateToProps = (state) => {
-  return {
-    friends: state.friends,
-    loading: state.loading,
-  };
-};
-export default connect(mapStateToProps, {})(App);
